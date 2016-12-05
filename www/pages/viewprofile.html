@@ -1,0 +1,74 @@
+<!-- (*) assigned classes -->
+<ion-view view-title="Profile">		
+    <ion-nav-buttons side="right">
+        <a href="javascript:;" class="button button-icon icon ion-compose" ng-click="editprofileshow()"></a>
+    </ion-nav-buttons>
+	<ion-content has-bouncing="true" overflow-scroll="false">
+		<div ng-if="contentloaded">	
+			<!-- *view-profile / container -->
+			<div class="view-profile">
+				<!-- *profile-bg / background color -->
+				<div class="profile-bg">
+		            <div class="item item-avatar" nav-clear>
+						<!-- *content-img / container -->
+		            	<div class="content-img">
+			            	<img ng-src="{{data.photo}}" alt="photo" />						
+							<a class="bg-img" ng-click="updateProfilePhoto()"></a>
+		            	</div>
+			            <h2>{{data.fullname}}</h2>
+			            <p>{{data.userid}}</p>
+			        </div>
+			    </div>
+			    <!-- button bar with style FOLLOWER / FOLLOWING -->
+
+			    <div class="button-bar">
+					<a class="button"  href="#/app/followers">
+						<h2>0</h2>
+						<p>BOUGHT</p>
+					</a>
+					<a class="button">
+						<h2>0</h2>
+						<p>SOLD</p>
+					</a>
+				</div>
+				<!-- list with inputs style -->
+				
+			</div>
+			<div class="list">			
+				<div class="item item-divider">Personal Details</div>			
+				<div class="item item-icon-left">
+	    			<i class="icon ion-email"></i>
+				    <strong>email address</strong><br />
+				    {{data.email}}
+				</div>
+				<div class="item item-icon-left" ng-show="data.phone">
+	    			<i class="icon ion-iphone"></i>
+				    <strong>phone number</strong><br />
+				    {{data.phone}}
+				</div>
+				<div class="item item-divider">Business Details</div>
+				<div class="item item-icon-left">
+	    			<i class="icon ion-briefcase"></i>
+				    <strong>business name</strong><br />
+				    {{data.businessname}}
+				</div>
+				<div class="item item-icon-left">
+	    			<i class="icon ion-briefcase"></i>
+				    <strong>business or profession</strong><br />
+				    <span style="white-space:pre-wrap;">{{data.businessprofession}}</span>
+				</div>
+				<div class="item item-icon-left">
+	    			<i class="icon ion-location"></i>
+				    <strong>business address</strong><br />
+				    {{data.businessaddress}}
+				</div>
+				<div class="item item-divider" ng-show="data.others.length">Other Information</div>
+				<div class="item item-icon-left" ng-show="data.others.length">
+	    			<i class="icon ion-chatbox-working"></i>
+				    <strong>other</strong><br />
+				    {{data.others}}
+				</div>
+	        </div>
+	    </div>
+	</ion-content>
+</ion-view>

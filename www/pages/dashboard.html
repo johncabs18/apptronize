@@ -1,0 +1,58 @@
+<!-- (*) assigned classes -->
+
+<ion-view view-title="Dashboard">
+	<ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-cash" ng-click="infoApp()"></button>
+        <button class="button button-icon icon ion-android-wifi" ng-click="infoApp()"></button>
+        <button class="button button-icon icon ion-android-notifications" ng-click="infoApp()"></button>
+    </ion-nav-buttons>
+	<ion-content has-bouncing="true" overflow-scroll="false" delegate-handle="mainScroll">
+		 <ion-refresher
+		    pulling-text="Refresh content..."		    
+		    on-refresh="refreshList()"
+		    spinner="none">
+		  </ion-refresher>
+		<div ng-if="contentloaded" class="{{contentloaded}}">	
+			<div style="width:60%; margin:10px auto 0 auto">
+				<div class="button-bar button-pill">
+		            <a class="button">Bought</a>
+		            <a class="button">Sold</a>
+	          	</div>
+          	</div>	 			
+          	<ion-list ng-if="lists != ''">
+	          	<div class="list card animated fadeIn" ng-repeat="trans in lists| orderBy:'-transid'">
+					<div class="item item-avatar item-icon-right">
+						<img src="{{trans.memberphoto}}">
+						<h2>{{trans.membername}}</h2>
+						<p class="icon-p">
+							<i class="icon ion-ios-clock-outline"></i>
+							<span am-time-ago="trans.transid"></span>
+						</p>
+					</div>
+					<div class="item item-image" ng-show="trans.photo">
+						<img src="{{trans.photo}}">
+					</div>
+				  	<div class="item item-body" style="padding-top:0">
+						<p>
+							{{trans.description}}
+						</p>
+					</div>			
+					<!--div class="item tabs tabs-secondary tabs-icon-left black-bg">
+					    <a class="tab-item">
+					      <i class="icon ion-ios-chatbubble-outline"></i>
+					      Comment
+					    </a>
+				  	</div-->
+				</div>
+			</ion-list>
+			<div ng-if="lists == ''">				
+	          	<div style="text-align: center; padding:20px 20px 0 20px">
+	          		<img src="img/slide3bg.png" style="width:100%"/>
+	          		<h2>No Recent Activity</h2>
+	          		<p>Start adding transactions now to fill your timeline with updates. Engage with Apptronize members, exchange services or make referrals.</p>
+	          	</div>
+          	</div>
+		</div>
+	</ion-content>
+	<button class="button icon ion-plus" ng-click="addtransactionshow()" style="position: fixed; bottom:20px; right: 20px; z-index: 999"></button>
+</ion-view>

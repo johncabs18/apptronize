@@ -1,0 +1,357 @@
+/* Empty. Add your own CSS if you like */
+/* latin-ext */
+form input + i.icon.error {
+  display: none;
+  margin-left: 8px;
+}
+
+form select + i.icon.error {
+  display: none;
+  margin-left: 8px;
+}
+
+form input + i.icon.error-month {
+  display: none;
+  margin-left: 8px;
+}
+
+form input + i.icon.error-appoint {
+  display: none;
+  margin-left: 8px;
+}
+
+form.ng-submitted input.ng-invalid + i.icon.error {
+  display: block;
+  padding-right: 8px;
+}
+
+form.ng-submitted select.ng-invalid + i.icon.error {
+  display: block;
+  padding-right: 8px;
+}
+
+form.ng-submitted input.ng-invalid + i.icon.error-month {
+  display: block;
+  padding-right: 35px;
+}
+
+form.ng-submitted input.ng-invalid + i.icon.error-appoint {
+  display: block;
+  padding-right: 35px;
+}
+
+form.ng-submitted input.ng-valid + i.icon.error {
+  display: none;
+}
+
+form.ng-submitted select.ng-valid + i.icon.error {
+  display: none;
+}
+
+form.ng-submitted input.ng-valid + i.icon.error-month {
+  display: none;
+}
+
+form.ng-submitted input.ng-valid + i.icon.error-appoint {
+  display: none;
+}
+
+.firstslide, .secondslide, .thirdslide, .fourthslide{
+  color:#fff;
+  text-align: center;
+  background: #e5345e; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#fe8661, #e5345e); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#fe8661, #e5345e); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#fe8661, #e5345e); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#fe8661, #e5345e); /* Standard syntax */
+  padding-left:30px;
+  padding-right:30px; 
+}
+
+.firstslide, .secondslide, .thirdslide, .fourthslide p{
+       
+  }
+
+.textcontent{
+  background: #fff;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding:30px;
+}
+
+.thirdslide{
+  background-image:url(../img/slide3bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: cover
+}
+
+.firstslide h2, .fourthslide h2{
+  padding-top:25px;
+  padding-bottom:10px;
+}
+
+.firstslide h2, .firstslide h3, .secondslide h3, .thirdslide h3, .fourthslide h3, .fourthslide h2{
+  color:#fff;
+}
+
+.firstslide img{
+  width:100%;  
+}
+
+.secondslide img{
+  margin-top:30px;
+  width:70%;    
+}
+
+.thirdslide img{  
+  margin-top:20px;
+  width:50%;  
+}
+
+.firstslide h3, .secondslide h3, .thirdslide h3, .fourthslide h3{
+ 
+}
+
+.fourthslide h2{
+  padding-top: 35px
+}
+
+.secondslide{
+  background: #34cdb7; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#80edc2, #34cdb7); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#80edc2, #34cdb7); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#80edc2, #34cdb7); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#80edc2, #34cdb7); /* Standard syntax */
+}
+
+.fourthslide{
+  background: #f5c573; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#f5c573, #ff995e); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#f5c573, #ff995e); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#f5c573, #ff995e); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#f5c573, #ff995e); /* Standard syntax */
+}
+
+.fontfamily{
+  font-family: 'Asap', 'Arial';
+}
+
+.custombtn{
+  border:0;
+  height:60px;
+}
+
+.signupbtn{  
+  background: #ff8762; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #ff8762 , #ff3463); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #ff8762, #ff3463); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #ff8762, #ff3463); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #ff8762 , #ff3463); /* Standard syntax */  
+}
+
+.loginbtn{
+  background-color: transparent!important;  
+  border: 1px solid #8a7e97!important;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
+
+.slider-pager {
+    bottom: 90px;
+}
+
+.slider-pager .slider-pager-page {
+    color: #fff;
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+.bgblack{
+  background-color:#000;
+  color:#fff;
+}
+
+.bgblack h1, .bgblack h2, .bgblack h3, .bgblack h4, .bgblack h5, .bgblack h6{
+  color:#fff;
+}
+
+.termsaccept{
+  position:fixed; 
+  bottom:0; 
+  width:100%;
+  border-top:1px solid gray;
+  padding-top:10px;
+  background: #fff
+}
+
+.termsaccept .button{
+  border-radius:0;
+  margin:0;
+  background:#01b1aa;
+  color:#fff;
+  height:60px;
+}
+
+.termsaccept p{
+  padding:0 20px;
+}
+
+.customplaceholder{
+  position:absolute;
+  left:8px;
+  top:12px;
+  z-index:-1;
+  opacity: :0.3;
+  color:#AAAAAA;
+}
+
+.customplaceholderreduce{
+    position:absolute;
+    left:8px;
+    top:2px;
+    z-index:-1;
+    opacity: :0.3;
+    font-size: 12px;
+    color:#AAAAAA;
+}
+
+.iconfieldalert{
+  margin-right:6px;
+}
+
+.popup-container.popup-showing {
+    background: #000;
+    /*opacity: 0.9;*/
+}
+
+.termscontent{
+  list-style: disc; 
+  padding: 0 0 0 30px;
+}
+
+.termscontent li h4{
+  padding-bottom:10px;
+}
+
+.popup{
+  border-radius: 5px!important;
+}
+
+.popup .button.button-dark{
+  color: #000;
+  border-radius: 5px;
+  height: 50px;
+  background-color: #fff;
+  font-size: 25px;
+}
+
+.popup .button.button-dark:hover{
+  color:#000;
+}
+
+.gpsicon{
+  font-size: 55px; 
+  border: 1px solid #4ac271; 
+  padding: 0px 20px; 
+  border-radius: 50px; 
+  color: #4ac271;
+}
+
+.popup .popup-head{
+  border-bottom:0;
+}
+
+.gpscontent{
+  text-align: center
+}
+
+.gpscontent p{
+  padding-top:10px;
+}
+
+.signupfirst .item{
+  border:0;
+  border-bottom:1px solid #eeeeee;
+}
+
+.custombtn2{
+  background: #fff;
+  border-color: #000;
+  height: 50px;
+  color: #000;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+.signupfirst input[type="text"], .signupfirst input[type="password"], .signupfirst input[type="email"], .signupfirst textarea{
+  font-size:16px;
+}
+
+.signupfirst .item-input{
+  padding-left:25px;
+  position: relative;
+}
+
+.signupicon{
+  position:absolute;
+  left:0; 
+  bottom:10px
+}
+
+.signupicon2{
+  position:absolute;
+  left:0; 
+  top:30px
+}
+
+.signupspinner{
+  position:absolute;
+  right:0; 
+  bottom:10px
+}
+
+.item-divider{
+  font-size: 20px;
+  line-height:25px;
+}
+
+.item-icon-left{
+  position: relative;
+}
+
+.item-icon-left .icon{
+  font-size: 20px;
+  position: absolute;
+  top: 16px; 
+  left:10px;
+  display: block;
+}
+
+.editprofile input, .editprofile textarea{
+  background:#EAF6F9;
+  display:block;
+  width:100%;
+}
+
+.inputerror{
+  border:1px solid red;
+}
+
+.button-bar.button-pill {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  border-radius: 30px;
+}
+
+.button-bar.button-pill .button:first-child {
+  -webkit-border-radius: 30px 0 0 30px;
+  border-radius: 30px 0 0 30px;
+}
+
+.button-bar.button-pill .button:last-child {
+  -webkit-border-radius: 0 30px 30px 0;
+  border-radius: 0 30px 30px 0;
+}

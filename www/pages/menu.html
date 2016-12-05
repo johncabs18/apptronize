@@ -1,0 +1,58 @@
+<!-- (*) classes assigned or controller -->
+
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-assertive">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-ios-drag" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+        </ion-side-menu-content>
+        <!-- *controller MenuActiveCtrl /  active items menu -->
+        <ion-side-menu side="left" expose-aside-when="large">
+        <!-- button in header-bar -->
+        <ion-header-bar>
+          <a href="#/menu/viewprofile" nav-clear menu-close class="button button-icon icon ion-ios-compose-outline"></a>
+        </ion-header-bar>
+        <ion-content has-bouncing="true" overflow-scroll="false">
+            <ul class="list">
+                <!-- item-avatar user with status -->
+                <a class="item item-avatar" nav-clear menu-close href="#/menu/dashboard">
+                    <img src="{{menudata.photo}}">
+                    <h2>{{menudata.fullname}}</h2>
+                    <p>{{menudata.userid}}</p>
+                </a>
+                <!-- menu items  with style active, inactive on off -->
+                <a class="item item-icon-left" ng-class="{active:isActive('/menu/viewprofile')}" nav-clear menu-close href="#/menu/viewprofile">
+                    <i class="icon ion-ios-person"></i>View Profile
+                </a>
+                <a class="item item-icon-left" ng-class="{active:isActive('/app/news-feed')}" nav-clear menu-close href="javascript:;">
+                    <i class="icon ion-speedometer"></i>My Activity Log
+                </a>
+                <a class="item item-icon-left" ng-class="{active:isActive('/menu/contacts')}" nav-clear menu-close href="#/menu/contacts">
+                    <i class="icon ion-clipboard"></i>Contacts
+                </a>
+                <a class="item item-icon-left" ng-class="{active:isActive('/app/profile')}" nav-clear menu-close href="javascript:;">
+                    <i class="icon ion-ios-people"></i>Referral
+                </a>
+                <a class="item item-icon-left" ng-class="{active:isActive('/app/profile')}" nav-clear menu-close href="javascript:;">
+                    <i class="icon ion-ios-personadd"></i>Non-Member Transaction
+                </a>
+                <a class="item item-icon-left" ng-class="{active:isActive('/app/profile')}" nav-clear menu-close href="javascript:;">
+                    <i class="icon ion-gear-a"></i>Settings
+                </a>
+                <a class="item item-icon-left" ng-class="{active:isActive('/app/profile')}" nav-clear menu-close href="javascript:;">
+                    <i class="icon ion-chatbubbles"></i>User Feedback
+                </a>
+                <a class="item item-icon-left" ng-class="{active:isActive('/app/profile')}" nav-clear menu-close href="javascript:;">
+                    <i class="icon ion-ios-information"></i>About
+                </a>
+            </ul>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

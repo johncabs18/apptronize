@@ -1,0 +1,43 @@
+<ion-modal-view>
+	<ion-content has-bouncing="true" overflow-scroll="false" delegate-handle="mainScroll">
+		<a href="javascript:;" style="float:right; margin:5px 10px 0 0;" ng-click="closeModal()" class="button button-icon icon ion-close"></a>
+		<div style="clear:both; overflow: hidden; padding:10px 0">
+			<form novalidate="novalidate" name="addtransaction" class="addtransaction" ng-submit="checkuserid(addtransaction)" ng-show="!doneuserid">	
+				<div style="border-bottom:1px solid gray;border-bottom:1px solid gray; clear:both; overflow:hidden; padding:20px 0 5px 0; margin:0 auto; width:85%; font-size: 20px">
+					<i class="icon ion-plus" style="display:block; float:right; margin: 8px 5px 0 0"></i>                    
+		          	<input style="display:block; float:left; width:90%; font-size: 20px" type="text" name="userid" ng-model="data.userid" placeholder="Enter UserID/Name" required>
+		        </div>	        
+		        <div class="row">
+			        <div class="col" style="padding:0 15px">
+			          <button class="button button-block custombtn2" ng-disabled="!addtransaction.$valid">
+			            NEXT
+			          </button>    
+			        </div>
+		     	</div>
+		    </form>
+		    <form novalidate="novalidate" name="addtransaction2" class="addtransaction2" ng-submit="submittransaction(addtransaction2)"ng-show="doneuserid" style="margin-top:20px">
+		    	<!-- <input type="hidden" name="userid" ng-model="data.userid" placeholder="Enter UserID/Name" required> -->
+		     	<div style="border-bottom:1px solid gray; border-top:1px solid gray; padding:10px 0 5px 0; margin:0 auto; width:85%; font-size: 20px">				
+		          	<textarea rows="5" style="width:100%; font-size: 20px" name="transdescription" ng-model="data.transdescription" placeholder="Write something?" required></textarea>	          	
+		        </div>
+		        <div style="text-align: center; padding:10px 30px 0 30px">
+			        <p>Describe your most recent transaction. You can also include a photo of the receipt or the product(s) you purchased.</p>
+			        <img ng-src="{{data.transactionphoto}}" alt="photo" ng-show="hidecameraicon" style="width:100%; height:200px; padding: 5px 5px 5px 5px;"/>	
+			        <a href="javascript:;" class="button button-icon icon ion-camera" ng-click="transactionphoto()" ng-show="!hidecameraicon"></a>
+		        </div>
+		        <div class="row">
+			        <div class="col" style="padding:0 15px">
+			          <button class="button button-block custombtn2" ng-disabled="!addtransaction2.$valid">
+			            SUBMIT
+			          </button>    
+			        </div>
+		     	</div>	
+		    </form>
+		</div>
+	    <div style="text-align:center; padding:20px 0 0 0" ng-show="!doneuserid">
+	        <h2>Add New Account<br />for Non-Member</h2>
+	        <p style="padding-left:30px; padding-right: 30px">Create a unique USERID so other Apptronize members can identify you easily:</p>
+	        <button class="button icon ion-plus" style="" ng-click="addnonmember()"></button>
+        </div>
+	</ion-content>
+</ion-modal-view>

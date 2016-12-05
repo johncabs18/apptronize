@@ -1,0 +1,83 @@
+<ion-modal-view>
+	<form novalidate="novalidate" name="updateprofile" class="editprofile" ng-submit="updateProfile(updateprofile)">
+		<ion-header-bar>
+		 	<a href="javascript:;" ng-click="closeModal()" class="button button-icon icon ion-close"></a>
+		 	<h1 class="title">Edit Profile</h1>
+	     	<button class="button button-icon icon ion-checkmark" ng-disabled="!updateprofile.$valid"></button>
+	    </ion-header-bar>	
+		<ion-content has-bouncing="true" overflow-scroll="false" delegate-handle="mainScroll">
+			<!-- *view-profile / container -->
+			<div class="view-profile">
+				<!-- *profile-bg / background color -->
+				<div class="profile-bg">
+		            <div class="item item-avatar" nav-clear>
+						<!-- *content-img / container -->
+		            	<div class="content-img">
+			            	<img ng-src="{{data.photo}}" alt="photo" />						
+							<a class="bg-img" ng-click="updateProfilePhoto()"></a>
+		            	</div>
+			            <h2>{{data.fullname}}</h2>		            
+			        </div>
+			    </div>			
+			</div>
+			<div class="list">			
+				<div class="item item-divider">Personal Details</div>			
+				<div class="item item-icon-left">
+	    			<i class="icon ion-at"></i>
+				    <strong>userID</strong><br />			    
+				    <input type="text" name="userid" ng-model="data.userid" required>				    
+				    <span style="color:red" ng-show="updateprofile.userid.$dirty">
+                    <span ng-show="updateprofile.userid.$error.required">Required field.</span>
+                </span>
+				</div>
+				<div class="item item-icon-left">
+	    			<i class="icon ion-person"></i>
+				    <strong>full name</strong><br />			    
+				    <input type="text" name="fullname" ng-model="data.fullname" required>				    
+				    <span style="color:red" ng-show="updateprofile.fullname.$dirty">
+                    <span ng-show="updateprofile.fullname.$error.required">Required field.</span>
+				</div>
+				<div class="item item-icon-left">
+	    			<i class="icon ion-email"></i>
+				    <strong>email address</strong><br />			    
+				    <input type="email" name="email" ng-model="data.email" required>				    
+				    <span style="color:red" ng-show="updateprofile.email.$dirty">
+                    <span ng-show="updateprofile.email.$error.required">Required field.</span>
+				</div>
+				<div class="item item-icon-left">
+	    			<i class="icon ion-iphone"></i>
+				    <strong>phone number</strong><br />
+				    <input type="number" ng-model="data.phone">
+				</div>
+				<div class="item item-divider">Business Details</div>
+				<div class="item item-icon-left">
+	    			<i class="icon ion-briefcase"></i>
+				    <strong>business name</strong><br />
+				    <input type="text" ng-model="data.businessname" name="businessname" required>
+				    <span style="color:red" ng-show="updateprofile.businessname.$dirty">
+                    <span ng-show="updateprofile.businessname.$error.required">Required field.</span>
+				</div>
+				<div class="item item-icon-left">
+	    			<i class="icon ion-briefcase"></i>
+				    <strong>business or profession</strong><br />
+				    <textarea ng-model="data.businessprofession" name="businessprofession" rows="5" required></textarea>
+				    <span style="color:red" ng-show="updateprofile.businessprofession.$dirty">
+                    <span ng-show="updateprofile.businessprofession.$error.required">Required field.</span>
+				</div>
+				<div class="item item-icon-left">
+	    			<i class="icon ion-location"></i>
+				    <strong>business address</strong><br />
+				    <input type="text" name="businessaddress" ng-model="data.businessaddress" required>				    
+				    <span style="color:red" ng-show="updateprofile.businessaddress.$dirty">
+                    <span ng-show="updateprofile.businessaddress.$error.required">Required field.</span>				    
+				</div>
+				<div class="item item-divider">Other Information</div>
+				<div class="item item-icon-left">
+	    			<i class="icon ion-chatbox-working"></i>
+				    <strong>other</strong><br />
+				    <textarea ng-model="data.others" rows="5"></textarea>
+				</div>
+	        </div>
+		</ion-content>
+	</form>
+</ion-modal-view>

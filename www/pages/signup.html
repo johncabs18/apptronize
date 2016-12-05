@@ -1,0 +1,90 @@
+<ion-view cache-view="false" view-title="">
+  <ion-content class="padding" has-bouncing="true" overflow-scroll="false">
+    <p class="text-center" style="padding:30px 0 0 0"><img src="img/logo.png" style="width:70%"/></p>
+    <form novalidate="novalidate" class="signupfirst" ng-submit="signupsubmit(signupdata)" name="signupdata">
+      <div class="list" style="padding:0 20px">
+        <label class="item item-input item-floating-label">
+          <i class="icon ion-at signupicon"></i>          
+          <span class="input-label">User ID</span>
+          <input type="text" ng-model="signup.userid" placeholder="User ID" ng-change="checkuserid()" required>
+          <i class="icon ion-close-round assertive signupspinner" ng-if="useridshowerror"></i>          
+          <i class="icon ion-checkmark-round balanced signupspinner" ng-if="useridshowsuccess"></i>
+          <ion-spinner icon="ios-small" ng-if="useridshowloading" class="signupspinner"></ion-spinner>
+        </label>
+        <label class="item item-input item-floating-label">
+          <i class="icon ion-person signupicon"></i>  
+          <span class="input-label">Full Name</span>
+           <input type="text" ng-model="signup.fullname" ng-change="checkfullname()" placeholder="Full Name" required>
+           <i class="icon ion-close-round assertive signupspinner" ng-if="fullnameshowerror"></i>
+          <i class="icon ion-checkmark-round balanced signupspinner" ng-if="fullnameshowsuccess"></i>
+          <ion-spinner icon="ios-small" class="signupspinner" ng-if="fullnameshowloading"></ion-spinner>
+        </label>
+        <label class="item item-input item-floating-label">
+          <i class="icon ion-email signupicon"></i>
+          <span class="input-label">Email</span>
+          <input type="email" ng-model="signup.email" placeholder="Email" ng-change="checkemail()" required>
+          <i class="icon ion-close-round assertive signupspinner" ng-if="emailshowerror"></i>
+          <i class="icon ion-checkmark-round balanced signupspinner" ng-if="emailshowsuccess"></i>
+          <ion-spinner icon="ios-small" class="signupspinner" ng-if="emailshowloading"></ion-spinner>
+        </label>
+      </div>
+      <div class="row">
+        <div class="col" style="padding:0 15px">
+          <button class="button button-block custombtn2" ng-disabled="!formvalid">
+            NEXT
+          </button>    
+        </div>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>
+<!--
+
+
+<ion-view cache-view="false" view-title="" class="backgroundmain">    
+  <ion-content class="padding">
+    <div ng-if="contentloaded" class="animated zoomIn">
+    <p class="text-center" style="padding:20px 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <form novalidate="novalidate" ng-submit="signup(signupdata)" name="signupdata">
+      <div class="list list-inset" style="margin:10px;">       
+        <label class="item item-input">
+        <div class="customplaceholder" ng-if="!useridnotempty"><i class="icon ion-at placeholder-icon"></i>User ID</div>
+        <div class="customplaceholderreduce" ng-if="useridnotempty"><i class="icon ion-at placeholder-icon"></i>User ID</div>
+          <input type="text" ng-model="signup.userid" ng-change="checkuserid()" required>
+          <i class="icon ion-close-round assertive iconfieldalert" ng-if="useridshowerror"></i>
+          <i class="icon ion-checkmark-round balanced iconfieldalert" ng-if="useridshowsuccess"></i>
+          <ion-spinner icon="ios-small" ng-if="useridshowloading"></ion-spinner>
+        </label>
+      </div>
+      <div class="list list-inset" style="margin:10px;">          
+        <label class="item item-input">
+          <div class="customplaceholder" ng-if="!fullnamenotempty"><i class="icon ion-person placeholder-icon"></i>Full Name</div>
+          <div class="customplaceholderreduce" ng-if="fullnamenotempty"><i class="icon ion-person placeholder-icon"></i>Full Name</div>
+          <input type="text" ng-model="signup.fullname" ng-change="checkfullname()" required>
+          <i class="icon ion-close-round assertive iconfieldalert" ng-if="fullnameshowerror"></i>
+          <i class="icon ion-checkmark-round balanced iconfieldalert" ng-if="fullnameshowsuccess"></i>
+          <ion-spinner icon="ios-small" ng-if="fullnameshowloading"></ion-spinner>
+        </label>
+      </div>
+      <div class="list list-inset" style="margin:10px;">
+        <label class="item item-input">
+          <div class="customplaceholder" ng-if="!emailnotempty"><i class="icon ion-email placeholder-icon"></i>Email</div>
+          <div class="customplaceholderreduce" ng-if="emailnotempty"><i class="icon ion-email placeholder-icon"></i>Email</div>
+          <input type="text" ng-model="signup.email" ng-change="checkemail()" required>
+          <i class="icon ion-close-round assertive iconfieldalert" ng-if="emailshowerror"></i>
+          <i class="icon ion-checkmark-round balanced iconfieldalert" ng-if="emailshowsuccess"></i>
+          <ion-spinner icon="ios-small" ng-if="emailshowloading"></ion-spinner>
+        </label>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button class="button button-block button-assertive" ng-disabled="!formvalid">
+            Next
+          </button>    
+        </div>
+      </div>
+    </form>
+    </div>
+  </ion-content>
+</ion-view>
+-->
